@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'genymotion'
 
 android {
     compileSdkVersion 26
@@ -18,6 +19,24 @@ android {
     }
 }
 
+genymotion {
+    devices {
+        xperia {
+            template "Sony Xperia Z - 4.3 - API 18 - 1080x1920"
+        }
+    }
+
+    config {
+        genymotionPath = "C:/Users/rob/AppData/Local/Genymobile/Genymotion/Genymobile/Genymotion/deployed/Sony Xperia Z - 4.3 - API 18 - 1080x1920"
+        taskLaunch = "myCustomTask"
+    }
+}
+genymotion {
+    config {
+        genymotionPath = "/home/user/app/genymotion/"
+        taskLaunch = "myCustomTask"
+    }
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
@@ -25,4 +44,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    classpath 'com.genymotion:plugin:1.4'
 }
