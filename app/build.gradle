@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 
-apply plugin: 'genymotion'
+// apply plugin: 'genymotion'
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -17,7 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    genymotion {
+    /* genymotion {
         devices {
             "Nexus 7" {
                 template "Google Nexus 7 - 4.2.2 - API 17 - 800x1280"
@@ -25,7 +25,7 @@ android {
                 deleteWhenFinish false
             }
         }
-    }
+    }*/
  }
 
 dependencies {
